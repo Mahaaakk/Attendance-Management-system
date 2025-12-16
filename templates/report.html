@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Report{% endblock %}
+
+{% block content %}
+<h3>Attendance Report</h3>
+
+<table class="table table-bordered table-hover">
+    <tr class="table-dark">
+        <th>Roll</th>
+        <th>Name</th>
+        <th>Present</th>
+        <th>Total</th>
+        <th>%</th>
+    </tr>
+
+    {% for r in report %}
+    <tr>
+        <td>{{ r.roll }}</td>
+        <td>{{ r.name }}</td>
+        <td>{{ r.present }}</td>
+        <td>{{ r.total }}</td>
+        <td>{{ r.percent }}%</td>
+    </tr>
+    {% endfor %}
+</table>
+<div class="d-flex justify-content-between align-items-center mb-3">
+   
+    <a href="/dashboard" class="btn btn-sm btn-outline-secondary">
+        ⬅ Back
+    </a>
+</div>
+
+{% endblock %}

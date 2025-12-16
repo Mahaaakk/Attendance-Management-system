@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h3 class="mb-4">Dashboard</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h5>Students</h5>
+                <a href="/students" class="btn btn-primary mt-2">Manage</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h5>Attendance</h5>
+                <a href="/attendance" class="btn btn-success mt-2">Mark</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h5>Reports</h5>
+                <a href="/report" class="btn btn-warning mt-2">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
